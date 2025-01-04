@@ -21,6 +21,8 @@ spec:
       - image: loubnakarim2001268/jenkins-flask:4
         name: flaskdemo
         resources: {}
+      imagePullSecrets:
+        - name: my-registry-secret  # Référence au secret créé
 status: {}
 
 ---
@@ -36,3 +38,4 @@ spec:
   - port: 80
     targetPort: 5000
     nodePort: 30007
+
